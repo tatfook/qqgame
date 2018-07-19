@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Hacker News</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="创意空间">
+	<meta name="author" content="xiaoyao">
+	
+	<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="http://minigame.qq.com/plat/social_hall/js/jquery.pm.js"></script>
+	<script type="text/javascript" src="http://minigame.qq.com/plat/social_hall/app_frame/qqgamelib.js?rev=8581"></script>
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script></script>
+	<script type="text/javascript" src="public/js/index.js"></script>
+</head>
+<body>
+<div id=="app">
+</div>
+</body>
+<script>
+
+$(function() {
+	const qqparams = g_app.qqparams;
+	const param = qqparams.param;
+
+	if (param == "buy"){
+		window.location.href = "/goods?appid="+qqparams.appid+"&openid="+qqparams.openid+"&openkey="+qqparams.openkey+"&pf="+qqparams.pf+"&pfkey="+qqparams.pfkey;
+		//window.location.href = "http://minigame.qq.com/plat/social_hall/app_frame/goods?appid="+qqparams.appid+"&openid="+qqparams.openid+"&openkey="+qqparams.openkey+"&pf="+qqparams.pf+"&pfkey="+qqparams.pfkey;
+	}
+
+});
+</script>
+</html>

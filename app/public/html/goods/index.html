@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title>Goods</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="创意空间">
+	<meta name="author" content="xiaoyao">
+	
+	<script type="text/javascript" src="http://ossweb-img.qq.com/images/js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="http://minigame.qq.com/plat/social_hall/js/jquery.pm.js"></script>
+	<script type="text/javascript" src="http://minigame.qq.com/plat/social_hall/app_frame/qqgamelib.js?rev=8581"></script>
+
+	<script type="text/javascript" src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/lodash.js/4.17.10/lodash.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.5.17-beta.0/vue.min.js"></script></script>
+	<script type="text/javascript" src="public/js/index.js"></script>
+</head>
+<body>
+<div id="app">
+	<div v-for="(x, index) in goodsList" :key="index">
+		<h5>{{x.goodsName}}</h5>
+		<p>{{"价格:" + x.price + "Q点"}}</p>
+		<button ng-click="clickBuyBtn(x)">购买</button>
+	</div>
+</div>
+</body>
+
+<script>
+//if (!pfkey){
+//	location.href = 'http://minigame.qq.com/plat/social_hall/app_frame/?appid='+appid+'&param=buy';
+//	return;
+//}
+
+new Vue({
+	el: "#app",
+
+	data: {
+		goodsList: [
+			{
+				goodsId:1,
+				goodsName: "100点券",
+				price: "100",
+			},
+			{
+				goodsId:1,
+				goodsName: "100点券",
+				price: "100",
+			},
+		],
+	},
+
+	methods: {
+		clickBuyBtn(goods) {
+			const config = g_app.config;
+			const qqparams = g_app.qqparams;
+			axios({
+				method: "POST",
+				url: config.canvasURLBaseUrl + "goods/buy",
+				data: qqparams
+			}).then(function(response) {
+				console.log(response);
+			}, function(response) {
+				console.log(response);
+			});
+			//var qqparams = g_app.qqparams;
+			//console.log(qqparams);
+			//GameAPI.BuyBox.show(qqparams.appid, "data.url_params", 1 ,"购买道具",function(){alert('close')},function(){alert('succ')});
+
+		}
+
+	}
+});
+</script>
+</html>
+
