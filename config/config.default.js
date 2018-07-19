@@ -4,7 +4,7 @@ const rootdir = path.resolve(".");
 
 exports.baseUrl = "/";
 exports.qqgame = {
-	host: "http://openapi.sparta.html5.qq.com,
+	host: "http://openapi.sparta.html5.qq.com",
 	//host: "https://openapi.tencentyun.com";
 	appid: "1106994032",
 	appkey: "oSsmnQYFPMUD1o36",
