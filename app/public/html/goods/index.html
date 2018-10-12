@@ -20,7 +20,7 @@
 	<div v-for="(x, index) in goodsList" :key="index">
 		<h5>{{x.goodsName}}</h5>
 		<p>{{"价格:" + x.price + "Q点"}}</p>
-		<button ng-click="clickBuyBtn(x)">购买</button>
+		<button @click="clickBuyBtn(x)">购买</button>
 	</div>
 </div>
 </body>

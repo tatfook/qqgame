@@ -11,6 +11,7 @@
 	<script type="text/javascript" src="http://minigame.qq.com/plat/social_hall/app_frame/qqgamelib.js?rev=8581"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17-beta.0/vue.min.js"></script></script>
+
 	<script type="text/javascript" src="public/js/index.js"></script>
 </head>
 <body>
@@ -24,7 +25,7 @@ $(function() {
 	const param = qqparams.param;
 
 	if (param == "buy"){
-		window.location.href = "/goods?appid="+qqparams.appid+"&openid="+qqparams.openid+"&openkey="+qqparams.openkey+"&pf="+qqparams.pf+"&pfkey="+qqparams.pfkey;
+		window.location.href = "/pay?appid="+qqparams.appid+"&openid="+qqparams.openid+"&openkey="+qqparams.openkey+"&pf="+qqparams.pf+"&pfkey="+qqparams.pfkey;
 		//window.location.href = "http://minigame.qq.com/plat/social_hall/app_frame/goods?appid="+qqparams.appid+"&openid="+qqparams.openid+"&openkey="+qqparams.openkey+"&pf="+qqparams.pf+"&pfkey="+qqparams.pfkey;
 	}
 
