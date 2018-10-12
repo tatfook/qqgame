@@ -70,6 +70,8 @@ function GameAPIBuyBoxShow() {
 	GameAPI.BuyBox.show(qqparams.appid, "data.url_params", 1 ,"购买道具",function(){alert('close')},function(){alert('succ')});
 }
 
-GameAPIBuyBoxShow();
+$(function() {
+	GameAPIBuyBoxShow();
+});
 </script>
 </html>
