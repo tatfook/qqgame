@@ -5,6 +5,8 @@ module.exports = app => {
 	//console.log(config);
 
 	router.get('/', controller.home.index);
+	router.post('/code', controller.home.code);
+
 	router.get('/goods', controller.goods.index);
 	router.post('/goods/buy', controller.goods.buy);
 	router.get('/goods/delivery', controller.goods.delivery);
