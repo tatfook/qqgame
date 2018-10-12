@@ -8,6 +8,7 @@ exports.qqgame = {
 	//host: "https://openapi.tencentyun.com";
 	appid: "1106994032",
 	appkey: "oSsmnQYFPMUD1o36",
+	CanvasURL:"5b45af1e-0.gz.1255384442.clb.myqcloud.com",
 }
 
 exports.keys = "keepwork";
@@ -16,18 +17,15 @@ exports.view = {
 	root: [
 		path.join(rootdir, 'app/public/html'),
 	].join(","),
-	defaultViewEngine: 'nunjucks',
+	defaultViewEngine: 'ejs',
 	mapping: {
-		'.tpl': "nunjucks",
+		'.ejs': "ejs",
+		'.html': "ejs",
+
 	}
 };
 
-exports.nunjucks = {
-	tags: {
-		variableStart: "{*",
-		variableEnd: "*}",
-	},
-};
+exports.ejs = {};
 
 exports.securities = {
 	enable: false,

@@ -11,4 +11,6 @@ module.exports = app => {
 	//router.post('/goods/delivery', controller.goods.delivery);
 
 	router.get("/news", controller.news.list);
+
+	router.get('/pay', controller.pay.index);
 };
